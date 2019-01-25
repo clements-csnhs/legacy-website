@@ -1,28 +1,54 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './nep.png';
 import './App.css';
+import {Headbar, Navbar} from './navbar.js'
 
 class App extends Component {
   render() {
     return (
+      
       <div className="App">
-        <header className="App-header">
+        <Headbar/>
+        <Navbar/>
+        <div className="App-body">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+          <h1>Big Chungus Text</h1>
+          <p id ="main_text">
+            The Clements CSNHS is the best club in the school!
+            <br/ >
+            We have an attendence rate of 20% at every meeting.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <input type = "button" value = "Pointless Button"/>
+          <Tick/>
+        </div>
       </div>
-    );
+    )
   }
 }
+
+class Tick extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {date : new Date()};
+  }
+
+  componentDidMount(){
+    this.timerID = setInterval( () => this.tick(), 1000);
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.timerID)
+  }
+
+  tick() {
+    this.setState( {date: new Date()})
+  }
+  render(){
+      return <h3> It is now {this.state.date.toLocaleTimeString()}</h3>
+  }
+}
+
+
 
 export default App;
