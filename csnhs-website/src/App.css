@@ -7,28 +7,96 @@
   height: 20vmin;
 }
 
+.App-bg {
+  position: center;
+  display: flex;
+  max-width: 100%;
+}
+
+.Top-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
+.Title-bar {
+  font-size: 54px;
+  color:rgb(224, 222, 222);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.Top-logo{
+  align-self: center;
+}
+
 .App-header {
   background-color: #b1bfcc;
   font-size: calc(12px + 2vmin);
   color: #b2c5e9;
-  height: 90px;
+  height: 33px;
   display: flex;
-  padding-left: 20px;
+  padding-left: 10px;
   padding-bottom: 25px;
-  padding-top: 25px;
+  padding-top: 30px;
 
 }
 
 .App-navbar {
-  background-color: #b1bfcc;
+  background-color: #24384b;
   font-size: calc(12px + 2vmin);
-  color: #131b2b;
-  height: 65px;
+  color: whitesmoke;
+  height: 50px;
   display: flex;
   padding-left: 20px;
   padding-bottom: 25px;
   position: sticky;
-  top: 0;
+  top:0;
+  z-index: 999;
+  
+}
+
+.App-sidebar {
+  position: fixed;
+  top: 40%;
+  left: -220px;
+  transition: .5s;
+  padding: 10px;
+  
+  
+}
+
+.App-sidebar:hover {
+  left:-10px;
+  transition-duration:  .5s;
+}
+
+
+ul.App-navbar {
+
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 1px 1px 1px;
+  
+}
+
+li.App-navbar {
+  display: block;
+  padding: 12px;
+  margin: 0px;
+  text-align: center;
+}
+
+li:hover{
+  background-color: #58656b; 
+  color: rgb(45, 51, 63);
 }
 
 .App-body {
@@ -41,11 +109,33 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-top: 40px
+  padding-top: 40px;
 }
+
+.App-textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: 15px;
+}
+
 
 .App-link {
   color: #61dafb;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  box-sizing: inherit;
+}
+
+a:hover {
+  color: rgb(45, 51, 63);
+  box-sizing: inherit;
 }
 
 @keyframes App-logo-spin {
@@ -68,3 +158,4 @@
     background-color:  #3f495e;
   }
 }
+

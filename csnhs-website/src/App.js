@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
-import logo from './nep.png';
+import logo from './star.png';
 import './App.css';
-import {Headbar, Navbar} from './navbar.js'
+import {Headbar, Navbar, HeaderImage, Sidebar} from './elements.js'
+
 
 class App extends Component {
   render() {
     return (
       
       <div className="App">
-        <Headbar/>
         <Navbar/>
+        <HeaderImage/>
+        <Sidebar/>
         <div className="App-body">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>Big Chungus Text</h1>
-          <p id ="main_text">
-            The Clements CSNHS is the best club in the school!
-            <br/ >
-            We have an attendence rate of 20% at every meeting.
-          </p>
-          <input type = "button" value = "Pointless Button"/>
-          <Tick/>
-        </div>
+        
+           <div className="App-textbox" data-aos = "fade-right">
+            <img src={logo} className="App-logo" alt="logo"/>
+            <h1>Capped From UT Gang</h1>
+            <p id ="main_text">
+              The Clements CSNHS is the best club in the school!
+              <br/>
+              We have an attendence rate of 20% at every meeting.
+           </p>
+         </div>
+
+         <div className = "App-textbox" data-aos = "fade-left">
+           <p id="more_text">
+             We do all sorts of amazing projects
+             <br/>
+             We just forgot about them in a few weeks
+           </p>
+           <input type = "button" value = "Pointless Button"/>
+            <Tick/>
+         </div>
+       </div>
       </div>
     )
   }
