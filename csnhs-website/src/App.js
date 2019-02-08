@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './star.png';
+import logo from './gfx/star.png';
 import './App.css';
 import {Headbar, Navbar, HeaderImage, Sidebar} from './elements.js'
 
@@ -9,7 +9,6 @@ class App extends Component {
     return (
       
       <div className="App">
-        <Navbar/>
         <HeaderImage/>
         <Sidebar/>
         <div className="App-body">
