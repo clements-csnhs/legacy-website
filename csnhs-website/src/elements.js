@@ -64,7 +64,7 @@ class ProjectsImage extends Component {
     render(){
         return (
             <div className = "top-container" >
-                <img src={projectsbg} className="App-bg" alt="background" />
+                <img src={projectsbg} className="App-bg" alt="background"/>
                 <div className = "Title-bar">
                     <h5>Projects</h5>
                 </div>
@@ -84,11 +84,58 @@ class Sidebar extends Component {
     }
 }
 
+class RequestRotate extends Component {
+    constructor(props){
+        super(props);
+        this.dismiss = this.dismiss.bind(this);
+        this.state = {hide : false};
+    }
+
+    dismiss(){
+        sessionStorage.setItem("rotate_dismissed", "true");
+        //window.alert("Testing");
+
+        
+        this.checkIfDismissed();
+        
+    }
+
+    checkIfDismissed(){
+        if(sessionStorage.hasOwnProperty("rotate_dismissed")){
+            if(sessionStorage.getItem("rotate_dismissed") == "true"){
+                this.setState({hide : true});
+            }
+            else {
+                this.setState({hide : false});
+            }
+        }
+
+    }
+    
+    componentWillMount(){
+        this.checkIfDismissed();
+    }
+    render(){
+        if(this.state.hide == true)
+            return(null)
+        else {
+        return(
+            <div className = "Request-rotate-device">
+                <h5>This website looks best in landscape mode</h5>
+                <button className = "Text-button" onClick={this.dismiss}>Don't Show Again</button> 
+            </div>
+        );
+        }
+    }
+}
+
+
 export {
     Headbar,
     Navbar,
     HeaderImage,
     AboutImage,
     ProjectsImage,
-    Sidebar
+    Sidebar,
+    RequestRotate
 }
