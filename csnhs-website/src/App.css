@@ -5,6 +5,11 @@ p{
 h1,h2,h3,h4,h5{
   font-family: 'Montserrat', sans-serif;
 }
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
 .App {
   text-align: center;
 }
@@ -24,6 +29,7 @@ h1,h2,h3,h4,h5{
 
 .Top-container {
   position: relative;
+  background-color: rgb(7, 7, 31);
   text-align: center;
   display: flex;
   max-width: 100%;
@@ -31,7 +37,6 @@ h1,h2,h3,h4,h5{
   width: auto;
   overflow: hidden;
 }
-
 
 .Title-bar-home {
   font-size: 3.8vw;
@@ -41,6 +46,7 @@ h1,h2,h3,h4,h5{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
   -webkit-transform: translate(-50%, -30%);
 }
 
@@ -52,7 +58,8 @@ h1,h2,h3,h4,h5{
   top: 20%;
   left: 50%;
   transform: translate(-50%, -30%);
-  -webkit-transform: translate(-50%, -10%);
+  -moz-transform: translate(-50%, -30%);
+  -webkit-transform: translate(-50%, -5%);
 }
 
 .Top-logo{
@@ -140,12 +147,33 @@ li:hover{
   cursor: pointer;
   display: inline-block
 }
+.Regular-button {
+  font-size: 8px+6vmin;
+  padding: 4px 14px;
+  font-family: 'Lato', sans-serif;
+  border-radius:2px;
+  margin: 2vmin;
+  background-clip: border-box;
+  cursor: pointer;
+  background-color: white;
+}
+
+.Input-field{
+  font-family: 'Lato', sans-serif;
+  font-size: calc(12px + 2vmin);
+  border-radius: 5px;
+  padding: 2vmin;
+  resize: none;
+  overflow:hidden;
+  text-align: center;
+}
 
 @media only screen and (orientation: landscape){
   .Request-rotate-device{
     display: none;
   }
 }
+
 
 .App-body {
   animation: Color-shift infinite 20s linear;
@@ -168,6 +196,7 @@ li:hover{
   font-size: calc(10px + 2vmin);
   color: white;
   margin-top: 15px;
+  max-width: 90%
 }
 
 .App-projectbox {
@@ -199,6 +228,12 @@ a {
 a:hover {
   color: rgb(45, 51, 63);
   box-sizing: inherit;
+}
+
+.Regular-button:hover {
+  background-color: #3870e0;
+  color: #13171f;
+  border-color: #13171f
 }
 
 @keyframes App-logo-spin {

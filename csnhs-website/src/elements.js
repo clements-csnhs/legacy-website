@@ -4,6 +4,7 @@ import logo from './gfx/csnhslogo.png';
 import bg from './gfx/bg.png';
 import aboutbg from './gfx/code.png';
 import projectsbg from './gfx/blend.png';
+import flatbg from './gfx/flatbg.png';
 import git_link from './gfx/github_link.png';
 import './App.css';
 
@@ -27,6 +28,7 @@ class Navbar extends Component {
                 <li class = "App-navbar"><Link to = "/Home">Home</Link></li>
                 <li class = "App-navbar"><Link to = "/About">About</Link></li>
                 <li class = "App-navbar"><Link to = "/Projects">Projects</Link></li>
+                <li class = "App-navbar"><Link to = "/Points">Points</Link></li>
              </ul>
             </div>
         );
@@ -73,6 +75,18 @@ class ProjectsImage extends Component {
     }
 }
 
+class PointsImage extends Component {
+    render(){
+        return (
+            <div className = "top-container" >
+            <img src={flatbg} className="App-bg" alt="background"/>
+                <div className = "Title-bar">
+                    <h5>Points</h5>
+                </div>
+            </div>
+        );
+    }
+}
 
 class Sidebar extends Component {
     render(){
@@ -102,7 +116,7 @@ class RequestRotate extends Component {
 
     checkIfDismissed(){
         if(sessionStorage.hasOwnProperty("rotate_dismissed")){
-            if(sessionStorage.getItem("rotate_dismissed") == "true"){
+            if(sessionStorage.getItem("rotate_dismissed") === "true"){
                 this.setState({hide : true});
             }
             else {
@@ -116,7 +130,7 @@ class RequestRotate extends Component {
         this.checkIfDismissed();
     }
     render(){
-        if(this.state.hide == true)
+        if(this.state.hide === true)
             return(null)
         else {
         return(
@@ -136,6 +150,7 @@ export {
     HeaderImage,
     AboutImage,
     ProjectsImage,
+    PointsImage,
     Sidebar,
     RequestRotate
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './gfx/star.png';
 import './App.css';
-import {Headbar, Navbar, HeaderImage, Sidebar} from './elements.js'
+import { HeaderImage, Sidebar} from './elements.js'
 
 
 class App extends Component {

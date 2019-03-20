@@ -6,7 +6,7 @@ import Routes from './routes'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './index.css';
-import App from './App';
+//import App from './App';
 
 AOS.init();
 ReactDOM.render(
