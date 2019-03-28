@@ -156,17 +156,59 @@ li:hover{
   background-clip: border-box;
   cursor: pointer;
   background-color: white;
+  float: right;
 }
 
 .Input-field{
   font-family: 'Lato', sans-serif;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(11px + 2vmin);
   border-radius: 5px;
   padding: 2vmin;
   resize: none;
   overflow:hidden;
-  text-align: center;
+  position: center;
+  width: 130%;
+  margin: 3px;
 }
+
+.Input-large{
+
+  font-family: 'Lato', sans-serif;
+  font-size: calc(5px + 2vmin);
+  border-radius: 5px;
+  padding: 2vmin;
+  resize: none;
+  overflow:hidden;
+  height: 20vh;
+  width: 150%;
+  margin: 3px;
+}
+
+.Input-label{
+  font-family: 'Lato', sans-serif;
+  font-size: calc(8px + 2vmin);
+  
+}
+
+.Col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.Col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 @media only screen and (orientation: landscape){
   .Request-rotate-device{

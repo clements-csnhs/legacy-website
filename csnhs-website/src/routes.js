@@ -3,6 +3,7 @@ import App from './App';
 import About from './About';
 import Projects from './Projects';
 import Points from './points';
+import Support from './support';
 import Nomatch from './Nomatch';
 import {Navbar, RequestRotate} from './elements.js'
 import {Switch, Route, Redirect} from  'react-router-dom';
@@ -22,6 +23,7 @@ class Routes extends Component {
                 <Route exact path="/About" component = {About}/>
                 <Route exact path="/Projects" component = {Projects}/>
                 <Route exact path="/Points" component = {Points}/>
+                <Route exact path="/Support" component = {Support}/>
                 <Route component = {Nomatch}/>
             </Switch>
             <RequestRotate/>

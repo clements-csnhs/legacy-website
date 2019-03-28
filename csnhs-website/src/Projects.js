@@ -59,7 +59,19 @@ class Projects extends Component {
              written and live coding portions. Contestants are divided into novice and advanced
              teams of up to three people each. 
             </p>
-</div>
+         </div>
+
+         <div className="App-projectbox" data-aos = "fade-left">
+
+            <h2>CHS Tech Support</h2>
+
+             <p>Have an issue with some technology? Is your computer acting up? You can ask the 
+             Clements CSNHS for some help! Unfortunately this service is still a work in progress,
+             but when it's up and running (which will be soon), you will be able to access it
+             from a page on this website.  
+            </p>
+         </div>
+
        </div>
       </div>
     )

@@ -29,6 +29,7 @@ class Navbar extends Component {
                 <li class = "App-navbar"><Link to = "/About">About</Link></li>
                 <li class = "App-navbar"><Link to = "/Projects">Projects</Link></li>
                 <li class = "App-navbar"><Link to = "/Points">Points</Link></li>
+                <li class = "App-navbar"><Link to = "/Support">Support</Link></li>
              </ul>
             </div>
         );
@@ -82,6 +83,19 @@ class PointsImage extends Component {
             <img src={flatbg} className="App-bg" alt="background"/>
                 <div className = "Title-bar">
                     <h5>Points</h5>
+                </div>
+            </div>
+        );
+    }
+}
+
+class SupportImage extends Component {
+    render(){
+        return (
+            <div className = "top-container" >
+            <img src={flatbg} className="App-bg" alt="background"/>
+                <div className = "Title-bar">
+                    <h5>Tech Support</h5>
                 </div>
             </div>
         );
@@ -151,6 +165,7 @@ export {
     AboutImage,
     ProjectsImage,
     PointsImage,
+    SupportImage,
     Sidebar,
     RequestRotate
 }

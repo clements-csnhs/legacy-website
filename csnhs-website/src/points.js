@@ -8,6 +8,8 @@ class Points extends Component{
         super(props);
         this.getPoints = this.getPoints.bind(this);
         this.state = {fetched : "" };
+
+        
     }
 
     render(){
@@ -64,6 +66,7 @@ class PointForm extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         
+        
     }
 
     handleChange(event){
@@ -78,12 +81,25 @@ class PointForm extends Component {
     }
 
     render(){
+
+        var centerText = {
+            textAlign: 'center',
+            width: '100%',
+        }
+
+        var centerButton = {
+            align: 'center',
+            display: 'block',
+        }
+
         return(
             <>
-            <form onSubmit = {this.handleSubmit}>
-                <input className = "Input-field" type="text" maxLength = "6"  onChange = {this.handleChange} />
-                <input className = "Regular-button" type = "submit" value = "Submit"/>
+            
+            <form onSubmit = {this.handleSubmit} >
+                <input className = "Input-field" type="text" maxLength = "6"  onChange = {this.handleChange} style = {centerText} placeholder = "ID Num" required/>
+                <input className = "Regular-button" type = "submit" value = "Submit" style = {centerButton} />
             </form>
+            
             <p>{this.state.value}</p>
             </>
         );
@@ -96,19 +112,20 @@ class PointForm extends Component {
             headers: {'Content-Type':'application/json'},
             body:  JSON.stringify({message: this.state.input }),
             
-        }).then(res => console.log(res));
+        }).then(res => res.json().then((body) => this.setState({value : body.msg.toString()})));
         
-       this.getData()
-        .then(res=> this.setState({value : res.message}))
+     /*  this.getData()
+        .then(res => this.setState({value : res.message}))
         .catch(err => console.log(err));
 
+        console.log(this.state.value); */
     }
 
     getData = async() => {
         const response = await fetch('/api/points');
         const body = await response.json();
 
-        console.log(body);
+       // console.log(body);
 
         if (response.status !== 200) {
             throw Error(body.message) 

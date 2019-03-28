@@ -15,7 +15,7 @@ class App extends Component {
         
            <div className="App-textbox" data-aos = "fade-right">
             <img src={logo} className="App-logo" alt="logo"/>
-            <h1>Capped From UT Gang</h1>
+            <h1>Waitlisted From UCLA Gang</h1>
             <p id ="main_text">
               The Clements CSNHS is the best club in the school!
               <br/>
