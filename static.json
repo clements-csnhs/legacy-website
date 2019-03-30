@@ -1,5 +1,8 @@
 {
   "root": "build/",
+  "routes": {
+      "/**": "index.html"
+  },
   "proxies": {
     "/route": {
       "origin": "url"
