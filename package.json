@@ -2,7 +2,6 @@
   "name": "csnhs-website",
   "version": "0.3.0",
   "private": true,
-  "homepage": "https://clementscs.herokuapp.com/",
   "dependencies": {
     "aos": "^2.3.4",
     "body-parser": "^1.18.3",
