@@ -39,8 +39,8 @@ class Navbar extends Component {
 class Footer extends Component{
     render(){
         return(
-        <div ClassName = "Footer">
-            <p>Footer</p>;
+        <div className = "App-footer">
+            <p className = "Footer-text"><Link to = "/Home">Home</Link></p>
         </div>
         );
     }
