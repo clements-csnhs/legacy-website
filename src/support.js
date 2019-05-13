@@ -80,7 +80,7 @@ class SupportForm extends Component{
     
     sendData(nameIn, emailIn, messageIn){
 
-        var date = new Date()
+        var date = new Date().toJSON().substring(0,10);
 
         fetch('/api/support', {
             method: 'POST',
@@ -116,7 +116,7 @@ class SupportForm extends Component{
                     </div>
                 
                     <div className = "Col-75">
-                        <input className = "Input-field" type="email" maxLength = "50" placeholder = "Contact Email"  id = "emailInput"required/>
+                        <input className = "Input-field" type="email" maxLength = "50" placeholder = "Contact Email"  id = "emailInput" required/>
                     </div>
                 </div>
                 
@@ -126,7 +126,7 @@ class SupportForm extends Component{
                     </div>
                 
                     <div className = "Col-75">
-                    <textarea className = "Input-large" type="text" maxLength = "500" placeholder = "Write something..." id = "descInput"required/>
+                    <textarea className = "Input-large" type="text" maxLength = "500" placeholder = "Write something..." id = "descInput" required/>
                     </div>
                 </div>
 
@@ -136,7 +136,7 @@ class SupportForm extends Component{
                     </div>
                 
                     <div className = "Col-75">
-                        <input className = "Input-field" maxLength = "8" placeholder = "Captcha" id = "captchaInput" required/>
+                        <input className = "Input-field" maxLength = "8" placeholder = "Captcha" id = "captchaInput" autocomplete = "off" required/>
                     </div>
                 </div>
       

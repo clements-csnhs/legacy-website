@@ -5,7 +5,7 @@ import Projects from './Projects';
 import Points from './points';
 import Support from './support';
 import Nomatch from './Nomatch';
-import {Navbar, RequestRotate} from './elements.js'
+import {Navbar, RequestRotate, Footer} from './elements.js'
 import {Switch, Route, Redirect} from  'react-router-dom';
 
 class Routes extends Component {
@@ -26,7 +26,9 @@ class Routes extends Component {
                 <Route exact path="/Support" component = {Support}/>
                 <Route component = {Nomatch}/>
             </Switch>
-            <RequestRotate/>
+            <Footer/>
+            
+           
             
         </div>
     );}

@@ -139,6 +139,15 @@ li:hover{
   z-index: 998;
 }
 
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index:997;
+  background-color:red;
+}
+
 .Text-button {
   border: none;
   background-color: inherit;

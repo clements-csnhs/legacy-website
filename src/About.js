@@ -47,6 +47,17 @@ class About extends Component {
            </p>
          </div>
 
+         <div className="App-textbox">
+            <h1>About This Site</h1>
+            <p id ="main_text">
+              This website was created using React, Node.JS, and SQLite3.
+              <br/>
+              Website design and programming by Erica Li
+              <br/>
+              Networking and deployment by Stephan Xie
+           </p>
+         </div>
+
        </div>
       </div>
     )

@@ -36,6 +36,16 @@ class Navbar extends Component {
     }
 }
 
+class Footer extends Component{
+    render(){
+        return(
+        <div ClassName = "Footer">
+            <p>Footer</p>;
+        </div>
+        );
+    }
+}
+
 class HeaderImage extends Component {
     render(){
         return (
@@ -161,6 +171,7 @@ class RequestRotate extends Component {
 export {
     Headbar,
     Navbar,
+    Footer,
     HeaderImage,
     AboutImage,
     ProjectsImage,
