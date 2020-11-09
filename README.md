@@ -1,5 +1,5 @@
-# csnhs-website
-Website for the Clements Computer Science National Honor Society
+# legacy-csnhs-website
+Website for the Clements Computer Science National Honor Society (no longer in use)
 
 ### If you want to run the website locally: ###
 
